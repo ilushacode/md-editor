@@ -1,32 +1,64 @@
-# React + TypeScript + Vite
+![Markdown Editor — скриншот](./preview.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Современный **онлайн редактор Markdown** с живым предпросмотром, стеклянным минималистичным интерфейсом и поддержкой светлой/тёмной темы.
 
-Currently, two official plugins are available:
+🌐 **Живая версия:** [ilushacode.github.io/md-editor](https://ilushacode.github.io/md-editor/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## ✨ Возможности
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📝 **Живой предпросмотр** — изменения видны мгновенно
+- 🌗 **Три темы** — светлая, тёмная и системная
+- 💾 **Автосохранение** — последний документ хранится локально
+- 🔗 **Шаринг через URL** — содержимое кодируется в hash-ссылке
+- ↩️ **История отмен** — `Ctrl+Z` / `Ctrl+Y`
+- 📥 **Импорт и экспорт** — загрузка и скачивание `.md` файлов
+- ⌨️ **Панель форматирования** — заголовки, списки, цитаты, код, ссылки
+- 🧪 **Покрыто тестами** — 38 юнит- и интеграционных тестов
+- 🚀 **Автодеплой** — CI/CD через GitHub Actions
 
-## Expanding the Oxlint configuration
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 🛠️ Стек
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- **Сборка** — Vite
+- **UI** — React 18 + TypeScript
+- **Стили** — Tailwind CSS v4
+- **Состояние** — Zustand
+- **Markdown** — react-markdown + remark-gfm + remark-breaks
+- **Иконки** — Lucide
+- **Тесты** — Vitest + Testing Library
+- **CI/CD** — GitHub Actions + GitHub Pages
+
+
+## 🚀 Локальный запуск
+
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+## 🧪 Тесты
+
+```bash
+npm test          # watch-режим
+npm run test:run  # однократный прогон
+```
+
+
+## 📦 Деплой
+
+Пуш в `main` автоматически собирает проект и публикует его в **GitHub Pages** через **GitHub Actions**.
+
+
+## ⌨️ Горячие клавиши
+
+| Комбинация | Действие |
+|---|---|
+| `Ctrl/Cmd + Z` | Отменить |
+| `Ctrl/Cmd + Y` или `Ctrl/Cmd + Shift + Z` | Повторить |
+
+
+## 📄 Лицензия
+
+MIT © Ilushacode
